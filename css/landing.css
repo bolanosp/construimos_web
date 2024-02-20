@@ -373,7 +373,6 @@ header figure:hover {
 #categorias-inicio a {
   width: 320px;
   height: 250px;
-  background-color: rgba(255, 255, 255, 0.1);
   position: absolute;
   top: 0;
   left: 0;
@@ -382,7 +381,7 @@ header figure:hover {
 }
 
 #categorias-inicio a:hover {
-  background-color: rgba(255, 255, 255, 0.6);
+  background-color: rgba(50, 50, 50, 0.5);
 }
 
 #categorias-inicio li a h2 {
@@ -469,7 +468,7 @@ header figure:hover {
   height: 200px;
   margin: auto;
   background-image: url(../imagenes/concrete_seamless.png);
-  margin: 50px auto;
+  margin: 0 auto;
   line-height: 200px;
   color: white;
   text-align: center;
@@ -544,6 +543,7 @@ header figure:hover {
   margin-top: 100px;
   margin-bottom: 50px;
   text-align: center;
+  font-weight: bold;
 }
 
 #tres-principales li {
@@ -554,17 +554,17 @@ header figure:hover {
 }
 
 #tres-principales li:nth-child(1) {
-  background-image: url(../imagenes/herramientas.jpg);
+  background-image: url(../imagenes/landing/principales/ferreteria.jpg);
   margin-left: 1%;
 }
 
 #tres-principales li:nth-child(2) {
-  background-image: url(../imagenes/obras-civiles.jpg);
+  background-image: url(../imagenes/landing/principales/obras.jpg);
   margin: 0 1%;
 }
 
 #tres-principales li:nth-child(3) {
-  background-image: url(../imagenes/materiales-de-construccion.jpg);
+  background-image: url(../imagenes/landing/principales/proyectos.jpg);
 }
 
 #tres-principales li a {
