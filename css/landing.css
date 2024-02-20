@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
 /*reset*/
 html,
 body,
@@ -119,7 +121,7 @@ q:after {
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 
 body {
-  font-family: "MontserratRegular", "ArsenalRegular", sans-serif;
+  font-family: "Montserrat", "ArsenalRegular", sans-serif;
   margin: 1.1vw;
   border: 0.1vw solid #1674f4;
   padding: 0vw;
@@ -177,7 +179,7 @@ a {
   width: 80px;
   height: 100px;
   text-align: center;
-  font-family: "ArsenalRegular";
+  font-family: "Montserrat", "ArsenalRegular";
   background: none;
   outline: none;
 
@@ -392,7 +394,7 @@ header figure:hover {
   border: 1px solid white;
   background-color: rgba(0, 79, 189, 0.7);
   font-size: 22px;
-  font-family: "ArsenalBold";
+  font-family: "Montserrat", "ArsenalBold";
   text-transform: uppercase;
   padding-top: 20px;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
