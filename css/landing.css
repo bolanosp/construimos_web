@@ -117,7 +117,7 @@ q:after {
 /*INICIO*/
 
 body {
-  font-family: "ArsenalRegular";
+  font-family: "MontserratRegular", sans-serif;
   margin: 1.1vw;
   border: 0.1vw solid #1674f4;
   padding: 0vw;
