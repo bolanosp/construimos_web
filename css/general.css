@@ -82,7 +82,7 @@ a {
   height: 100%;
   top: 0;
   left: 0;
-  background-image: url(../imagenes/concrete_seamless.png);
+  background-image: url(../imagenes/landing/patterns/pattern_gray.png);
   z-index: 100;
 }
 
@@ -445,7 +445,7 @@ footer h5 a:hover {
 
 #especializado {
   width: 100%;
-  background-image: url(../imagenes/concrete_seamless.png);
+  background-image: url(../imagenes/landing/patterns/pattern_gray.png);
   margin-top: 20px;
   padding: 5%;
   box-sizing: border-box;
@@ -466,7 +466,7 @@ footer h5 a:hover {
 
 #linea-de-tiempo {
   width: 100%;
-  background-image: url(../imagenes/concrete_seamless.png);
+  background-image: url(../imagenes/landing/patterns/pattern_gray.png);
   border-top: 4px double #1674f4;
   margin-top: 20px;
   padding-top: 50px;
