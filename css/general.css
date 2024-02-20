@@ -1,0 +1,2320 @@
+body {
+	font-family: 'ArsenalRegular';
+	margin:20px 20px 0 20px;
+	}
+
+::-webkit-scrollbar {
+	width: 14px;
+	}
+
+::-webkit-scrollbar-track { /*fondo-barra-scroll*/
+	background-color: #E9E9E9;
+	}
+
+::-webkit-scrollbar-thumb { /*barra-scroll*/
+	background-color: #1674F4;
+	}
+
+::-webkit-scrollbar-thumb:hover {
+	background-color:#005DC5;
+	}
+
+a {
+	text-decoration:none;
+
+	transition: 0.2s ease;
+	-o-transition: 0.2s ease;
+	-webkit-transition: 0.2s ease;
+	}
+
+* {box-sizing:border-box;}
+
+::selection {
+	background-color:rgba(22,116,244,0.3);
+	}
+
+/*MENÚ*/
+
+#menu-general {
+	width: 0;
+	height: 0;
+	border-top: 150px solid #1674F4;
+	border-right: 150px solid transparent;
+	position:absolute;
+	top:20px;
+	left:20px;
+	}
+
+#trigger-overlay {
+	border:none;
+	color:#fff;
+	font-size:18px;
+	cursor:pointer;
+	position:absolute;
+	top:-150px;
+	width:80px;
+	height:100px;
+	text-align:center;
+	font-family: 'ArsenalRegular';
+	background:none;
+	outline:none;
+
+	transition: 0.2s ease;
+	-o-transition: 0.2s ease;
+	-webkit-transition: 0.2s ease;
+	}
+
+#trigger-overlay:hover {
+/*	transform: scale(0.9);*/
+	width:70px;
+
+	}
+
+/* Overlay style */
+.overlay {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background-image:url(../imagenes/concrete_seamless.png);
+	z-index:100;
+}
+
+/* Overlay closing cross */
+.overlay .overlay-close {
+	width: 60px;
+	height: 60px;
+	position: absolute;
+	right: 20px;
+	top: 20px;
+	overflow: hidden;
+	border: none;
+	background: url(../imagenes/close-menu.png) no-repeat center center;
+	color: transparent;
+	outline: none;
+	z-index: 100;
+	cursor:pointer;
+	opacity:0.8;
+}
+
+.overlay .overlay-close:hover {
+	opacity:1;
+	}
+
+/* Menu style */
+.overlay nav {
+	text-align: center;
+	position: relative;
+	top: 40%;
+	height: 60%;
+	-webkit-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+
+.overlay ul {
+	list-style: none;
+	padding: 0;
+	margin: 0 auto;
+	display: inline-block;
+	height: 100%;
+	position: relative;
+}
+
+.overlay ul li {
+	display: block;
+
+}
+
+.overlay ul li a {
+	display: block;
+	color: #002C5B;
+	font-size:40px;
+	line-height:80px;
+	-webkit-transition: color 0.2s;
+	transition: color 0.2s;
+}
+
+.overlay ul li a:hover {
+	color: #005DC5;
+}
+
+/* Effects */
+.overlay-hugeinc {
+	opacity: 0;
+	visibility: hidden;
+	-webkit-transition: opacity 0.5s, visibility 0s 0.5s;
+	transition: opacity 0.5s, visibility 0s 0.5s;
+}
+
+.overlay-hugeinc.open {
+	opacity: 1;
+	visibility: visible;
+	-webkit-transition: opacity 0.5s;
+	transition: opacity 0.5s;
+}
+
+.overlay-hugeinc nav {
+	-webkit-perspective: 1200px;
+	perspective: 1200px;
+}
+
+.overlay-hugeinc nav ul {
+	opacity: 0.4;
+	-webkit-transform: translateY(-25%) rotateX(35deg);
+	transform: translateY(-25%) rotateX(35deg);
+	-webkit-transition: -webkit-transform 0.5s, opacity 0.5s;
+	transition: transform 0.5s, opacity 0.5s;
+}
+
+.overlay-hugeinc.open nav ul {
+	opacity: 1;
+	-webkit-transform: rotateX(0deg);
+	transform: rotateX(0deg);
+}
+
+.overlay-hugeinc.close nav ul {
+	-webkit-transform: translateY(25%) rotateX(-35deg);
+	transform: translateY(25%) rotateX(-35deg);
+}
+
+/*CIERRE MENÚ*/
+
+/*POP UP*/
+/* --------------------------------
+xnugget info
+-------------------------------- */
+.cd-nugget-info {
+	text-align: center;
+	position: absolute;
+	width: 100%;
+	height: 50px;
+	line-height: 50px;
+	bottom: 0;
+	left: 0;
+  }
+  .cd-nugget-info a {
+	position: relative;
+	font-size: 14px;
+	color: #5e6e8d;
+	-webkit-transition: all 0.2s;
+	-moz-transition: all 0.2s;
+	transition: all 0.2s;
+  }
+  .no-touch .cd-nugget-info a:hover {
+	opacity: .8;
+  }
+  .cd-nugget-info span {
+	vertical-align: middle;
+	display: inline-block;
+  }
+  .cd-nugget-info span svg {
+	display: block;
+  }
+  .cd-nugget-info .cd-nugget-info-arrow {
+	fill: #5e6e8d;
+  }
+
+
+
+/* --------------------------------
+xpopup
+-------------------------------- */
+.cd-popup-trigger {
+	width: 200px;
+	height: 70px;
+	position: fixed;
+	right: 50px;
+	bottom: 50px;
+	background-image: url(../imagenes/contact.png);
+	background-position: left center;
+	background-repeat: no-repeat;
+	background-color: #005DC5;
+	color: white;
+	font-size: 16px;
+	line-height: 18px;
+	z-index: 20;
+	border-radius: 20px;
+	padding: 15px 10px 20px 60px;
+  }
+
+  .cd-popup-trigger:hover {
+    background-color: #25D366;
+
+  }
+
+.cd-popup {
+	z-index: 10;
+	position: fixed;
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	background-color: rgba(255,255,255,0.8);
+	opacity: 0;
+	visibility: hidden;
+	-webkit-transition: opacity 0.3s 0s, visibility 0s 0.3s;
+	-moz-transition: opacity 0.3s 0s, visibility 0s 0.3s;
+	transition: opacity 0.3s 0s, visibility 0s 0.3s;
+  }
+  .cd-popup.is-visible {
+	opacity: 1;
+	visibility: visible;
+	-webkit-transition: opacity 0.3s 0s, visibility 0s 0s;
+	-moz-transition: opacity 0.3s 0s, visibility 0s 0s;
+	transition: opacity 0.3s 0s, visibility 0s 0s;
+  }
+
+  .cd-popup-container {
+	position: relative;
+	width: 90%;
+	height: 200px;
+	padding-top: 40px;
+	max-width: 400px;
+	margin: 4em auto;
+	background: #005DC5;
+	border-radius: .25em .25em .4em .4em;
+	text-align: center;
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+	-webkit-transform: translateY(-40px);
+	-moz-transform: translateY(-40px);
+	-ms-transform: translateY(-40px);
+	-o-transform: translateY(-40px);
+	transform: translateY(-40px);
+	/* Force Hardware Acceleration in WebKit */
+	-webkit-backface-visibility: hidden;
+	-webkit-transition-property: -webkit-transform;
+	-moz-transition-property: -moz-transform;
+	transition-property: transform;
+	-webkit-transition-duration: 0.3s;
+	-moz-transition-duration: 0.3s;
+	transition-duration: 0.3s;
+  }
+
+  .cd-popup-container ul {
+	  width: 80%;
+	  height: 120px;
+	  margin: auto;
+
+  }
+
+  .cd-popup-container ul li{
+	  color: white;
+	  font-size: 16px;
+	  line-height: 50px;
+	  font-weight: 900;
+	  width: 50%;
+	  height: 150px;
+	  position: relative;
+	  float: left;
+	  text-align: center;
+  }
+
+  .cd-popup-container ul li a:hover {
+	  opacity: 0.7;
+  }
+
+
+  .cd-popup-container .cd-popup-close {
+	position: absolute;
+	top: 8px;
+	right: 8px;
+	width: 30px;
+	height: 30px;
+  }
+  .cd-popup-container .cd-popup-close::before, .cd-popup-container .cd-popup-close::after {
+	content: '';
+	position: absolute;
+	top: 12px;
+	width: 14px;
+	height: 3px;
+	background-color: white;
+  }
+  .cd-popup-container .cd-popup-close::before {
+	-webkit-transform: rotate(45deg);
+	-moz-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	-o-transform: rotate(45deg);
+	transform: rotate(45deg);
+	left: 8px;
+  }
+  .cd-popup-container .cd-popup-close::after {
+	-webkit-transform: rotate(-45deg);
+	-moz-transform: rotate(-45deg);
+	-ms-transform: rotate(-45deg);
+	-o-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+	right: 8px;
+  }
+  .is-visible .cd-popup-container {
+	-webkit-transform: translateY(0);
+	-moz-transform: translateY(0);
+	-ms-transform: translateY(0);
+	-o-transform: translateY(0);
+	transform: translateY(0);
+  }
+  @media only screen and (min-width: 1170px) {
+	.cd-popup-container {
+	  margin: 8em auto;
+	}
+  }
+/*CIERRE POP UP**/
+
+header {
+	width:100%;
+	border:1px solid #1674F4;
+	box-sizing:border-box;
+	}
+
+header figure a:hover {
+	opacity:0.9;
+	}
+
+footer {
+	background-color:#1674F4;
+	color:#FFF;
+	margin:auto;
+	width:480px;
+	height:240px;
+	text-align:center;
+	font-size:16px;
+	line-height:25px;
+	border-radius:480px 480px 0 0;
+	padding-top:55px;
+	box-sizing:border-box;
+	margin-top:50px;
+	clear:both;
+	}
+
+footer p a:hover {
+	opacity: 0.6;
+}
+
+footer h5 {
+	margin-top:10px;
+	}
+
+footer h5 a {
+	color:#B0EFFD;
+	font-size: 14px;
+	}
+
+footer h5 a:hover {
+	color:#FFF;
+	}
+
+
+/*CONSTRUIMOS-NUESTRA-HISTORIA*/
+
+#header-nuestra-historia {
+	background-image:url(../imagenes/construimos-obras.jpg);
+	background-attachment:fixed;
+	background-size:cover;
+	}
+
+#intro-construimos {
+	margin:auto;
+	max-width:500px;
+	background-color:rgba(0,93,197,0.7);
+	color:#fff;
+	text-align:center;
+	padding-top:80px;
+
+	transition: 0.3s ease;
+	-o-transition: 0.3s ease;
+	-webkit-transition: 0.3s ease;
+	}
+
+#intro-construimos:hover {
+	background-color:rgba(0,93,197,0.8);
+	max-width:508px;
+	}
+
+#intro-construimos h1 {
+	font-size:23px;
+	line-height:28px;
+	padding:0 70px;
+	margin-bottom:15px;
+	}
+
+#intro-construimos p {
+	font-size:20px;
+	line-height:23px;
+	padding:20px 70px 30px 70px;
+	background-color:rgba(0,44,91,0.5);
+	}
+
+#especializado {
+	width:100%;
+	background-image:url(../imagenes/concrete_seamless.png);
+	margin-top:20px;
+	padding:5%;
+	box-sizing:border-box;
+	}
+
+#especializado p {
+	color:#005DC5;
+	font-size:25px;
+	line-height:30px;
+	text-align:center;
+	max-width:860px;
+	margin:auto;
+	}
+
+#especializado p span {
+	font-family: 'ArsenalBold';
+	}
+
+#linea-de-tiempo {
+	width:100%;
+	background-image:url(../imagenes/concrete_seamless.png);
+	border-top:4px double #1674F4;
+	margin-top:20px;
+	padding-top:50px;
+	}
+
+#linea-de-tiempo h2 {
+	text-align:center;
+	}
+
+.titulos-fechas {
+	color:#1674F4;
+	font-size:60px;
+	font-family: 'ArsenalBold';
+	}
+
+
+#fechas {
+	margin:auto;
+	max-width:1024px;
+	margin-top:100px;
+	}
+
+#fechas li {
+	font-size:25px;
+	line-height:28px;
+	color:#657976;
+	box-sizing:border-box;
+	padding-bottom:70px;
+	}
+
+
+#fechas li:nth-child(odd) {
+	text-align:right;
+	border-right:1px dotted #1674F4;
+	padding-right:50px;
+	width:50%;
+	}
+
+.iconos-right {
+	width:71px;
+	height:71px;
+	position:absolute;
+	margin-top:-25px;
+	margin-left:15px;
+	}
+
+#fechas li:nth-child(even) {
+	width:50%;
+	margin-left:50%;
+	border-left:1px dotted #1674F4;
+	padding-left:50px;
+	}
+
+.iconos-left {
+	width:71px;
+	height:71px;
+	position:absolute;
+	margin-top:-25px;
+	margin-left:-85px;
+	}
+
+#mapa {
+	width:100%;
+	height:750px;
+	background-image:url(../imagenes/concrete_seamless.png);
+	margin-top:20px;
+	margin-bottom: 50px;
+	padding-top:60px;
+	box-sizing:border-box;
+	}
+
+#mapa h2 {
+	text-align:center;
+	margin-bottom:50px;
+	}
+
+#mapa #hemos-llegado,
+#mapa figure {
+	float:left;
+	}
+
+#mapa #hemos-llegado {
+	width:30%;
+	margin-left:20%;
+	font-size:21px;
+	line-height:24px;
+	color:#657976;
+	}
+
+#mapa #hemos-llegado li {
+	margin-bottom:20px;
+	}
+
+#mapa #hemos-llegado li span {
+	font-family: 'ArsenalBold';
+	}
+
+#mapa figure {
+	width:27%;
+	}
+
+/*FERRETERÍA*/
+
+#header-ferreteria {
+	background-image:url(../imagenes/pattern-blue.jpg);
+	background-attachment:fixed;
+	padding-bottom:60px;
+	}
+
+#header-ferreteria figure,
+#header-ferreteria figure img {
+	width:250px;
+	height:250px;
+	}
+
+#header-ferreteria figure {
+	margin:auto;
+	margin-top:30px;
+	margin-bottom:30px;
+	}
+
+#header-ferreteria h1 {
+	font-size:50px;
+	color:#fff;
+	padding:20px;
+	width:70%;
+	margin:auto;
+	border:1px solid rgba(255,255,255,0.5);
+	text-align:center;
+	box-sizing:border-box;
+	text-align:center;
+	margin-bottom:20px;
+	}
+
+#header-ferreteria p {
+	font-size:23px;
+	line-height:30px;
+	background-color:#fff;
+	color:#005DC5;
+	width:70%;
+	padding:30px 20px;
+	margin:auto;
+	box-sizing:border-box;
+	text-align:center;
+	box-shadow:0 0 30px rgba(0,44,91,0.8);
+	}
+
+#header-ferreteria p span {
+	color:#657976;
+	}
+
+/*categorías*/
+
+.categorias-grandes {
+	height:400px;
+	background-size:cover;
+	box-sizing:border-box;
+	margin-top:20px;
+	position:relative;
+	float:left;
+	}
+
+#tubos-pvc {
+	width:100%;
+	background-image:url(../imagenes/tubos-pvc.jpg);
+	}
+
+#tubos-pvc h2 {
+	width:20%;
+	left:40%;
+	color:#005DC5;
+	background-color:rgba(255,255,255,0.7);
+	border:1px solid #1674F4;
+	box-sizing:border-box;
+	}
+
+#accesorios-pvc {
+	width:58%;
+	background-image:url(../imagenes/accesorios-pvc.jpg);
+	margin-bottom:20px;
+	}
+
+#accesorios-pvc h2 {
+	width:36%;
+	left:32%;
+	color:#fff;
+	background-color:rgba(22,116,244,0.7);
+	border:1px solid #fff;
+	box-sizing:border-box;
+	}
+
+#hierros {
+	width:40%;
+	margin-left:2%;
+	background-image:url(../imagenes/hierro-y-alambres.jpg);
+	margin-bottom:20px;
+	}
+
+#hierros h2 {
+	width:60%;
+	left:20%;
+	color:#005DC5;
+	background-color:rgba(255,255,255,0.7);
+	border:1px solid #1674F4;
+	box-sizing:border-box;
+	}
+
+#tubos-pvc:before,
+#accesorios-pvc:before,
+#hierros:before {
+    content: "";
+	width:100%;
+	height:400px;
+    display: block;
+
+	-moz-transition: all .3s linear;
+    -webkit-transition: all .3s linear;
+    -ms-transition: all .3s linear;
+    -o-transition: all .3s linear;
+    transition: all .3s linear;
+	}
+
+#tubos-pvc:before,
+#hierros:before {
+	background-color: rgba(255,255,255,0.5);
+	}
+
+#accesorios-pvc:before {
+	background-color: rgba(22,116,244,0.5);
+	}
+
+#tubos-pvc:hover:before,
+#accesorios-pvc:hover:before,
+#hierros:hover:before {
+	background:none;
+	}
+
+.categorias-grandes .nombre-categorias {
+	font-size:28px;
+	padding:20px;
+	text-align:center;
+	position:absolute;
+	top:160px;
+	font-family: 'ArsenalBold';
+	}
+
+#categorias-menores li a {
+	position:relative;
+	float:left;
+	width:32%;
+	height:300px;
+	text-align:center;
+	box-sizing:border-box;
+	background-size:cover;
+	margin-bottom:20px;
+	}
+
+#categorias-menores li a:before {
+	content: "";
+	width:100%;
+	height:300px;
+    display: block;
+
+	-moz-transition: all .3s linear;
+    -webkit-transition: all .3s linear;
+    -ms-transition: all .3s linear;
+    -o-transition: all .3s linear;
+    transition: all .3s linear;
+	}
+
+#categorias-menores li .hover-azul:before {
+	background-color:rgba(22,116,244,0.5);
+	}
+
+#categorias-menores li a:hover:before {
+	background-color:rgba(22,116,244,0.0);
+	}
+
+#categorias-menores li a span {
+	font-size:25px;
+	padding:20px;
+	position:absolute;
+	top:110px;
+	left:25%;
+	width:50%;
+	box-sizing:border-box;
+	font-family: 'ArsenalBold';
+	}
+
+#categorias-menores li .hover-azul span {
+	border:1px solid #fff;
+	color:#fff;
+	background-color:rgba(0,93,197,0.5);
+	}
+
+#categorias-menores li .hover-blanco:before {
+	background-color:rgba(255,255,255,0.5);
+	}
+
+#categorias-menores li .hover-blanco span {
+	border:1px solid #1674F4;
+	color:#1674F4;
+	background-color:rgba(255,255,255,0.5);
+	}
+
+.margen-centro {
+	margin: 0 2%;
+	}
+
+.cubiertas {
+	background-image:url(../imagenes/cubiertas.jpg);
+	}
+
+.estructuras {
+	background-image:url(../imagenes/estructuras.jpg);
+	}
+
+.tanques-y-plasticos {
+	background-image:url(../imagenes/tanques-y-plasticos.jpg);
+	}
+
+.pintura {
+	background-image:url(../imagenes/pintura.jpg)
+	}
+
+.griferia {
+	background-image:url(../imagenes/griferia.jpg)
+	}
+
+.porcelanas {
+	background-image:url(../imagenes/porcelana.jpg);
+	}
+
+.herramientas {
+	background-image:url(../imagenes/herramientas.jpg)
+	}
+
+.dotacion {
+	background-image:url(../imagenes/dotacion.jpg)
+	}
+
+.disolventes {
+	background-image:url(../imagenes/disolventes.jpg)
+	}
+
+.accesorios-y-repuestos {
+	background-image:url(../imagenes/respuestos-accesorios.jpg);
+	}
+
+.cemento {
+	background-image:url(../imagenes/cemento.jpg);
+	}
+
+#marcas {
+	width:100%;
+	height:300px;
+	background-image:url(../imagenes/concrete_seamless.png);
+	position:relative;
+	clear:both;
+	box-sizing:border-box;
+	padding-top:50px;
+	}
+
+#marcas h2 {
+	font-size:35px;
+	max-width:650px;
+	color:rgba(101,121,118,0.7);
+	margin:auto;
+	font-family: 'ArsenalBold';
+	text-align:center;
+	}
+
+/*FERRETERIA CATEGORIAS PAG-INTERNAS*/
+
+.header-categorias {
+	background-size:cover;
+	background-position:center center;
+	height:600px;
+	background-attachment:fixed;
+	}
+
+.header-tubos-PVC {
+	background-image:url(../imagenes/tubos-pvc-2.jpg);
+	}
+
+.header-accesorios-PVC {
+	background-image:url(../imagenes/accesorios-pvc-2.jpg);
+	}
+
+.header-hierros-alambres-y-mallas {
+	background-image:url(../imagenes/hierros-alambres-y-mallas.jpg);
+	}
+
+.header-cubiertas {
+	background-image:url(../imagenes/cubiertas-2.jpg);
+	}
+
+.header-estructuras {
+	background-image:url(../imagenes/estructuras-2.jpg);
+	}
+
+.header-tanques-y-plasticos {
+	background-image:url(../imagenes/tanques-y-plasticos-2.jpg);
+	}
+
+.header-pintura {
+	background-image:url(../imagenes/pintura-2.jpg);
+	}
+
+.header-griferias {
+	background-image:url(../imagenes/griferia-2.jpg);
+	}
+
+.header-porcelanas {
+	background-image:url(../imagenes/porcelana.jpg);
+	}
+
+.header-herramientas {
+	background-image:url(../imagenes/herramientas-2.jpg);
+	}
+
+.header-dotacion {
+	background-image:url(../imagenes/dotacion-2.jpg);
+	}
+
+.header-disolventes {
+	background-image:url(../imagenes/disolventes-2.jpg);
+	}
+
+.header-accesorios-y-repuestos {
+	background-image:url(../imagenes/accesorios-y-repuestos.jpg);
+	}
+
+.header-cemento {
+	background-image:url(../imagenes/cemento-2.jpg);
+	}
+
+
+.header-categorias article {
+	background-color:rgba(0,93,197,0.8);
+	width:400px;
+	height:600px;
+	padding:70px 20px;
+	box-sizing:border-box;
+	}
+
+.header-categorias article figure {
+	margin:auto;
+	width:220px;
+	}
+
+.header-categorias article figure img {
+	width:100%;
+	}
+
+.header-categorias article h2 {
+	text-align:center;
+	font-size:30px;
+	border-top:1px solid rgba(255,255,255,0.5);
+	border-bottom:1px solid rgba(255,255,255,0.5);
+	color:#fff;
+	padding:20px;
+	font-family: 'ArsenalItalic';
+	}
+
+.header-categorias article h1 {
+	text-align:center;
+	font-size:50px;
+	color:#fff;
+	font-family: 'ArsenalBold';
+	padding-top:30px;
+	}
+
+#menu-ferreteria {
+	position:relative;
+	float:left;
+	width:260px;
+	background-image:url(../imagenes/concrete_seamless.png);
+	padding:30px;
+	margin-top:30px;
+	box-sizing:border-box;
+	margin-bottom:50px;
+	}
+
+#menu-ferreteria h3 {
+	font-size:24px;
+	font-family: 'ArsenalBold';
+	margin-bottom:20px;
+	color:#0158AF;
+	}
+
+#menu-ferreteria li {
+	margin-bottom:8px;
+	list-style: inside disc;
+	color:#9DADB3;
+	}
+
+#menu-ferreteria li a {
+	color:#0166D0;
+	font-size:18px;
+	}
+
+#menu-ferreteria li a:hover {
+	margin-left:10px;
+	color:#657981;
+	}
+
+#footer-tablas {
+	width:100%;
+	background-color:red;
+	height:50px;
+	clear:both;
+	}
+
+
+/*OBRAS CIVILES*/
+
+#intro-obras-civiles {
+	width:100%;
+	height:300px;
+	margin-top:20px;
+	margin-bottom:20px;
+	}
+
+#intro-obras-civiles h2,
+#intro-obras-civiles section {
+	width:49%;
+	height:300px;
+	position:relative;
+	float:left;
+	text-align:center;
+	box-sizing:border-box;
+	}
+
+#intro-obras-civiles h2 {
+	background-image:url(../imagenes/concrete_seamless.png);
+	margin-right:2%;
+	font-size:28px;
+	line-height:35px;
+	padding:100px;
+	color:#005DC5;
+	}
+
+#intro-obras-civiles section {
+	background-image:url(../imagenes/familia-construimos.jpg);
+	background-repeat:no-repeat;
+	background-position:center;
+	padding:80px;
+	}
+
+#obras-civiles {
+	width:100%;
+	height:1750px;
+	}
+
+#obras-civiles li {
+	width:80%;
+	height:230px;
+	margin-bottom:20px;
+	}
+
+#obras-civiles li:nth-child(even) {
+	float:left;
+	}
+
+#obras-civiles li:nth-child(odd) {
+	float:right;
+	text-align:right;
+	}
+
+#obras-civiles li figcaption,
+#obras-civiles li figure {
+	position:relative;
+	float:left;
+	height:230px;
+	}
+
+#obras-civiles li figcaption {
+	width:30%;
+	margin-right:1%;
+	margin-left:1%;
+	background-image:url(../imagenes/concrete_seamless.png);
+	padding:60px 30px;
+	box-sizing:border-box;
+	}
+
+
+#obras-civiles li figcaption h2 {
+	font-size:28px;
+	line-height:35px;
+	color:#005DC5;
+	font-family: 'ArsenalBold';
+	margin-bottom:15px;
+	}
+
+
+#obras-civiles li figcaption h2,
+#obras-civiles li figcaption a {
+	position:relative;
+	}
+
+#obras-civiles li figcaption a {
+	padding:8px 30px;
+	border:1px solid rgba(22,116,244,0.7);
+	font-size:20px;
+	font-family: 'ArsenalItalic';
+	color:#005DC5;
+	}
+
+#obras-civiles li figcaption a:hover {
+	background-color:#005DC5;
+	color:#fff;
+	padding:8px 30px 8px 120px;
+	}
+
+
+#obras-civiles li figure {
+	width:68%;
+	background-size:cover;
+	background-position:center;
+	}
+
+#obras-civiles li figure:before {
+	content: "";
+	width:100%;
+	height:230px;
+    display: block;
+	background-color:rgba(0,93,197,0.5);
+	position:absolute;
+	top:0;
+
+	transition: 0.4s ease;
+	-o-transition: 0.4s ease;
+	-webkit-transition: 0.4s ease;
+	}
+
+#obras-civiles li figure:hover:before {
+	background-color:rgba(0,93,197,0.0);
+	}
+
+.acueducto {
+	background-image:url(../imagenes/obras-1.jpg);
+	}
+
+.hogar-grupal {
+	background-image:url(../imagenes/obras-2.jpg);
+	}
+
+.mejoramiento-vial {
+	background-image:url(../imagenes/obras-3.jpg);
+	}
+
+.obras-de-arte {
+	background-image:url(../imagenes/obras-4.jpg);
+	}
+
+.pavimentacion {
+	background-image:url(../imagenes/obras-5.jpg);
+	}
+
+.puente {
+	background-image:url(../imagenes/obras-6.jpg);
+	}
+
+.vivienda-interes {
+	background-image:url(../imagenes/obras-7.jpg);
+	}
+
+/*Obras civiles - Proyectos */
+
+.boton-sig-proyecto {
+	position:fixed;
+	top:70%;
+	background-color:#fff;
+	color:#005DC5;
+	width:170px;
+	height:50px;
+	box-sizing:border-box;
+	font-family: 'ArsenalBold';
+	font-size:18px;
+	padding:15px;
+	text-align:center;
+	z-index:2;
+	}
+
+.ant-obra {
+	left:-120px;
+	color:rgba(0,93,197,0.0);
+	}
+
+.ant-obra:hover {
+	left:20px;
+	color:rgba(0,93,197,1);
+	}
+
+.ant-obra::after {
+	content:url(../imagenes/flechas.png);
+	position:absolute;
+	top:0;
+	right:-21px;
+	width:21px;
+	height:50px;
+	}
+
+.sig-obra {
+	right:-120px;
+	color:rgba(0,93,197,0.0);
+	}
+
+.sig-obra:hover {
+	right:20px;
+	color:rgba(0,93,197,1);
+	}
+
+.sig-obra::before {
+	content:url(../imagenes/flechas-2.png);
+	position:absolute;
+	top:0;
+	left:-21px;
+	width:21px;
+	height:50px;
+	}
+
+#header-galeria-obras {
+	background-image:url(../imagenes/pattern-blue.jpg);
+	padding-top:10px;
+	}
+
+#header-galeria-obras figure,
+#header-galeria-obras figure img {
+	margin:auto;
+	width:200px;
+	height:200px;
+	}
+
+#header-galeria-obras h1 {
+	text-align:center;
+	color:#FFF;
+	text-transform:uppercase;
+	font-size:30px;
+	max-width:800px;
+	margin:auto;
+	font-family: 'ArsenalBold';
+	border-top:1px dotted rgba(255,255,255,1);
+	padding:20px 20px 0 20px;
+	}
+
+
+#header-galeria-obras h4 {
+	max-width:1024px;
+	padding:20px;
+	border:1px solid rgba(255,255,255,0.3);
+	color:#FFF;
+	font-size:20px;
+	line-height:24px;
+	font-family: 'ArsenalItalic';
+	margin:auto;
+	box-sizing:border-box;
+	}
+
+
+#header-galeria-obras footer {
+	background-color:transparent;
+	margin-top:0;
+	border-radius:0;
+	padding-top:50px;
+	}
+
+
+/*NUESTROS PROYECTOS*/
+
+
+.titulo-asi-trabajamos {
+	max-width:750px;
+	margin:auto;
+	text-align:center;
+	color:#005DC5;
+	font-size:50px;
+	font-family: 'ArsenalBold';
+	margin-top:50px;
+	margin-bottom:30px;
+	padding:20px;
+	text-transform:uppercase;
+	}
+
+#intro-proyectos {
+	max-width:1024px;
+	height:300px;
+	margin:auto;
+	margin-bottom:100px;
+	}
+
+#intro-proyectos p,
+#intro-proyectos a {
+	position:relative;
+	height:300px;
+	float:left;
+	box-sizing:border-box;
+	}
+
+#intro-proyectos p {
+	background-image:url(../imagenes/concrete_seamless.png);
+	font-size:25px;
+	line-height:32px;
+	color:#005DC5;
+	text-align:center;
+	margin-right:2%;
+	padding:70px 40px;
+	width:40%;
+	}
+
+#intro-proyectos a {
+	width:58%;
+	background-image:url(../imagenes/reserva-de-los-lagos.jpg);
+	box-shadow:0 0 5px rgba(101,121,118,0.6);
+	}
+
+
+#intro-proyectos a:before {
+	position:absolute;
+	top:0;
+	left:0;
+	background-color:rgba(0,93,197,0.7);
+	width:100%;
+	height:300px;
+	content: "Reserva de los lagos";
+	color:#fff;
+	display:block;
+	font-size:40px;
+	color:#fff;
+	text-align:center;
+	padding:115px;
+	font-family: 'ArsenalBold';
+	box-sizing:border-box;
+	text-transform:uppercase;
+	text-shadow:1px 1px 5px rgba(0,26,53,0.6);
+
+	transition: 0.4s ease;
+	-o-transition: 0.4s ease;
+	-webkit-transition: 0.4s ease;
+	}
+
+#intro-proyectos a:hover:before {
+	background-color:rgba(0,93,197,0.0);
+	padding-top:170px;
+	color:rgba(255,255,255,0.0);
+	text-shadow:1px 1px 5px rgba(0,26,53,0.0);
+	}
+
+
+
+
+/*POLÍTICA DE CALIDAD*/
+
+#header-calidad {
+	background-image:url(../imagenes/pattern-blue.jpg);;
+	background-attachment:fixed;
+	padding:120px 0;
+	}
+
+#header-calidad figure {
+	margin:auto;
+	}
+
+#header-calidad figure,
+#header-calidad figure img {
+	width:250px;
+	height:250px;
+	}
+
+#header-calidad h1 {
+	margin:auto;
+	width:300px;
+	text-align:center;
+	color:#fff;
+	border:1px solid rgba(255,255,255,0.4);
+	font-size:30px;
+	text-transform:uppercase;
+	font-family: 'ArsenalBold';
+	padding:15px;
+	margin-top:30px;
+	}
+
+#contenido-calidad {
+	background-image:url(../imagenes/concrete_seamless.png);
+	width:100%;
+	height:800px;
+	box-shadow:0 2px 20px rgba(124,124,124,0.5);
+	}
+
+#contenido-calidad figure,
+#contenido-calidad p {
+	height:800px;
+	}
+
+#contenido-calidad figure {
+	background-image:url(../imagenes/politica-de-calidad.jpg);
+	background-repeat:no-repeat;
+	width:40%;
+	float:left;
+	border-right:1px dotted #C0C0C0;
+	}
+
+#contenido-calidad p {
+	font-size:20px;
+	line-height:23px;
+	color:#005DC5;
+	box-sizing:border-box;
+	padding-top:10%;
+	padding-right:5%;
+	padding-left:5%;
+	width:59%;
+	float:right;
+	text-align:justify;
+	}
+
+#contenido-calidad p span {
+	font-size:28px;
+	line-height:31px;
+	}
+
+#cierre-calidad {
+	margin:auto;
+	max-width:768px;
+	font-size:30px;
+	line-height:40px;
+	text-align:center;
+	color:#005DC5;
+	border:1px solid #1674F4;
+	padding:20px;
+	margin-top:70px;
+	margin-bottom:30px;
+	}
+
+/*CONTACTO*/
+
+#header-contacto {
+	background-image:url(../imagenes/concrete_seamless.png);
+	padding-top:20px;
+	padding-bottom:100px;
+	}
+
+
+#header-contacto figure,
+#header-contacto figure img {
+	margin:auto;
+	width:180px;
+	height:180px;
+	}
+
+#header-contacto h1 {
+	max-width:500px;
+	margin:auto;
+	margin-top:30px;
+	margin-bottom:20px;
+	color:#005DC5;
+	font-size:25px;
+	line-height:30px;
+	text-align:center;
+	font-family: 'ArsenalBold';
+	border-bottom:1px dotted #005DC5;
+	box-sizing:border-box;
+	padding:10px 40px;
+	}
+
+
+#form-contacto {
+	margin:auto;
+	max-width:500px;
+	font-size:18px;
+	font-family: 'ArsenalRegular';
+	padding:0 15px;
+	box-sizing:border-box;
+	}
+
+#form-contacto h3 {
+	font-family: 'ArsenalItalic';;
+	color:#005DC5;
+	font-size:26px;
+	}
+
+#form-contacto .botones-form {
+	width:100%;
+	border: 1px solid #005DC5;
+	padding:7px;
+	margin-top:5px;
+	box-sizing:border-box;
+	background-color:transparent;
+	color:#005DC5;
+	outline:none;
+
+		transition: 0.2s ease;
+	-o-transition: 0.2s ease;
+	-webkit-transition: 0.2s ease;
+	}
+
+#form-contacto .botones-form:hover {
+	border: 1px solid #3889F5;
+	}
+
+#form-contacto .mensaje {
+	height:120px;
+	font-family: 'ArsenalRegular';
+	outline:none;
+	}
+
+#form-contacto #enviar {
+	border:none;
+	background-color:#005DC5;
+	color:#fff;
+	width:70%;
+	float:right;
+	box-sizing:border-box;
+	padding:7px;
+	margin-top:-5px;
+	font-family: 'ArsenalRegular';
+	font-size:18px;
+	cursor:pointer;
+	outline:none;
+
+	transition: 0.2s ease;
+	-o-transition: 0.2s ease;
+	-webkit-transition: 0.2s ease;
+	}
+
+#form-contacto #enviar:hover {
+	width:50%;
+	background-color:#0055B3;
+	}
+
+#contacto {
+	background-image:url(../imagenes/pattern-blue.jpg);
+	padding:80px 30px;
+	margin-top:20px;
+	}
+
+#contacto p {
+	text-align:center;
+	color:#fff;
+	font-size:25px;
+	line-height:40px;
+	margin-bottom:40px;
+	}
+
+#contacto p span {
+	background-color:#fff;
+	color:#005DC5;
+	padding:10px;
+	}
+
+
+#contacto h3 {
+	color:#FFF;
+	text-align:center;
+	max-width:700px;
+	border-top:1px solid rgba(255,255,255,0.7);
+	margin:auto;
+	font-size:30px;
+	font-family: 'ArsenalBold';
+	padding-top:40px;
+	}
+
+.contacto-mapas {
+	position:relative;
+	float:left;
+	width:49%;
+	height:400px;
+	background-image:url(../imagenes/concrete_seamless.png);
+	padding-top:40px;
+	box-sizing:border-box;
+	margin-top:20px;
+	margin-bottom:40px;
+	}
+
+.contacto-mapas-centro {
+	margin-left:2%;
+	}
+
+.contacto-mapas h3 {
+	text-align:center;
+	font-family: 'ArsenalBold';
+	font-size:28px;
+	color:#005DC5;
+	padding-bottom:20px;
+	}
+
+.contacto-mapas p {
+	background-color:rgba(255,255,255,0.7);
+	box-shadow:0 0 10px rgba(153,153,153,0.4);
+	font-size:20px;
+	line-height:24px;
+	color:#005DC5;
+	padding:15px;
+	text-align:center;
+	box-sizing:border-box;
+	}
+
+
+/*MEDIA QUERY
+*******************************************/
+
+@media screen and (max-width:1600px) {
+
+#mapa figure {
+	width:33%;
+	}
+
+}
+
+@media screen and (max-width:1366px) {
+
+#categorias-menores li a span {
+	font-size:22px;
+	padding:15px;
+	left:20%;
+	width:60%;
+	}
+
+#intro-obras-civiles h2 {
+	padding:80px;
+	}
+
+#obras-civiles li {
+	width:90%;
+	}
+
+	}
+
+
+@media screen and (max-width:1300px){
+
+#menu-ferreteria {
+	float:none;
+	width:100%;
+	padding:30px;
+	margin-bottom:20px;
+	text-align:center;
+	}
+
+#menu-ferreteria h3 {
+	text-align:center;
+	}
+
+#menu-ferreteria li {
+	display:inline-block;
+	margin-bottom:30px;
+	}
+
+#menu-ferreteria li a {
+	font-size:16px;
+	color:#005DC5;
+	padding:5px 10px;
+	border-left:1px solid rgba(1,102,208,0.5);
+	text-transform:uppercase;
+	text-align:center;
+	}
+
+#menu-ferreteria li a:hover {
+	margin-left:0;
+	color:#657981;
+	padding:5px 9px;
+	}
+
+	}
+
+
+
+@media screen and (max-width:1280px) {
+
+#contenido-calidad p {
+	padding-right:50px;
+	}
+
+#mapa figure {
+	width:40%;
+	}
+
+#mapa #hemos-llegado {
+	width:45%;
+	margin-left:5%;
+	}
+
+#obras-civiles li figcaption h2 {
+	font-size:24px;
+	line-height:28px;
+	}
+
+
+}
+
+@media screen and (max-width:1024px) {
+
+#fechas {
+	padding:0 30px;
+	}
+
+#mapa #hemos-llegado {
+	font-size:20px;
+	line-height:22px;
+	}
+#mapa figure {
+	width:50%;
+	}
+
+/*ferreteria*/
+
+
+#header-ferreteria h1 {
+	width:90%;
+	}
+
+#header-ferreteria p {
+	width:80%;
+	}
+
+.categorias-grandes {
+	height:300px;
+	}
+
+.categorias-grandes .nombre-categorias {
+	top:110px;
+	}
+
+#tubos-pvc:before,
+#accesorios-pvc:before,
+#hierros:before {
+	height:300px;
+	}
+
+/*OBRAS CIVILES*/
+
+#intro-obras-civiles h2 {
+	padding:80px 40px;
+	font-size:25px;
+	line-height:30px;
+	}
+
+#obras-civiles li figcaption h2 {
+	font-size:20px;
+	line-height:25px;
+	}
+
+#obras-civiles li figcaption a {
+	font-size:18px;
+	}
+
+#obras-civiles li figcaption a:hover {
+	padding:8px 30px 8px 90px;
+	}
+
+
+}
+
+@media screen and (max-width:1020px) {
+
+
+#contenido-calidad {
+	height:100%;
+	}
+
+#contenido-calidad p {
+	height:100%;
+	}
+
+#contenido-calidad figure {
+	display:none;
+	}
+
+#contenido-calidad p {
+	padding-top:50px;
+	padding-bottom:50px;
+	padding-right:5%;
+	padding-left:5%;
+	width:100%;
+	float:none;
+	}
+
+#contenido-calidad p span {
+	font-size:28px;
+	line-height:31px;
+	}
+
+/*ferreteria-categorias*/
+
+#tubos-pvc h2 {
+	width:40%;
+	left:30%;
+	}
+
+#accesorios-pvc h2 {
+	width:60%;
+	left:20%;
+	}
+
+#hierros h2 {
+	width:80%;
+	left:10%;
+	}
+
+.categorias-grandes .nombre-categorias {
+	font-size:25px;
+	}
+
+#categorias-menores li a {
+	width:49%;
+	height:300px;
+	}
+
+.margen-centro {
+	margin: 0 0;
+	}
+
+.cubiertas,
+.tanques-y-plasticos,
+.griferia,
+.herramientas {
+	margin-right:2%;
+	}
+
+/*OBRAS CIVILES*/
+
+#intro-obras-civiles section {
+	padding:45px;
+	}
+
+#obras-civiles li figcaption a:hover {
+	padding:8px 30px 8px 40px;
+	}
+
+/*proyectos*/
+
+#intro-proyectos p {
+	font-size:22px;
+	line-height:28px;
+	padding:50px 30px;
+	}
+
+/*CONTACTO*/
+
+#contacto {
+	padding-bottom:50px;
+	}
+
+.contacto-mapas {
+	position:relative;
+	float:none;
+	width:100%;
+	height:400px;
+	margin-top:0px;
+	margin-bottom:20px;
+	}
+
+.contacto-mapas-centro {
+	margin-left:0;
+	margin-right:0;
+	}
+
+}
+
+@media screen and (max-width:768px) {
+
+#especializado {
+		padding:10%;
+		}
+
+#fechas li {
+	font-size:20px;
+	line-height:23px;
+	}
+
+#mapa {
+	height:auto;
+	padding:50px 30px;
+	}
+
+#mapa #hemos-llegado,
+#mapa figure {
+	float:none;
+	width:100%;
+	margin:auto;
+	}
+
+/*ferreteria*/
+
+#header-ferreteria figure,
+#header-ferreteria figure img {
+	width:200px;
+	height:200px;
+	}
+
+#header-ferreteria figure {
+	margin:auto;
+	margin-top:20px;
+	margin-bottom:20px;
+	}
+
+#header-ferreteria h1 {
+	font-size:32px;
+	width:80%;
+	}
+
+/*oBRAS CIVILES*/
+
+#intro-obras-civiles h2 {
+	padding:60px 30px;
+	font-size:25px;
+	line-height:30px;
+	}
+
+/*NUESTROS PROYECTOS*/
+
+.titulo-asi-trabajamos {
+	font-size:45px;
+	line-height:50px;
+	}
+
+}
+
+@media screen and (max-width:760px) {
+
+#accesorios-pvc,
+#hierros {
+	width:100%;
+	margin-bottom:20px;
+	}
+
+.categorias-grandes {
+	height:230px;
+	}
+
+#hierros {
+	margin-left:0;
+	margin-top:0;
+	}
+
+
+#tubos-pvc:before,
+#accesorios-pvc:before,
+#hierros:before {
+	height:230px;
+	}
+
+
+.categorias-grandes .nombre-categorias {
+	top:80px;
+	}
+
+#categorias-menores li a {
+	height:220px;
+	}
+
+
+#categorias-menores li a:before {
+	height:220px;
+	}
+
+#categorias-menores li a span {
+	font-size:20px;
+	padding:10px;
+	top:90px;
+	left:10%;
+	width:80%;
+	}
+
+/*obras civiles*/
+
+#intro-obras-civiles {
+	height:auto;
+	}
+
+#intro-obras-civiles h2 {
+	height:auto;
+	width:100%;
+	border-bottom:1px solid #005DC5;
+	}
+
+#intro-obras-civiles section {
+	width:100%;
+	margin-bottom:20px;
+	}
+
+#obras-civiles {
+	height:auto;
+	}
+
+#obras-civiles li {
+	width:90%;
+	margin:auto;
+	}
+
+#obras-civiles li:nth-child(even),
+#obras-civiles li:nth-child(odd) {
+	float:none;
+	text-align:center;
+	}
+
+#obras-civiles li figcaption {
+	width:100%;
+	height:auto;
+	margin-bottom:20px;
+	}
+
+#obras-civiles li figure {
+	display:none;
+	}
+
+
+
+#obras-civiles li figcaption h2 {
+	font-size:25px;
+	line-height:32px;
+	}
+
+
+#obras-civiles li figcaption a:hover {
+	padding:8px 80px;
+	}
+
+#menu-ferreteria {
+	display:none;
+	}
+
+/*proyectos*/
+
+.titulo-asi-trabajamos {
+	font-size:40px;
+	margin-top:10px;
+	margin-bottom:10px;
+	padding:20px;
+	}
+
+#intro-proyectos {
+	width:90%;
+	height:auto;
+	margin-bottom:0;
+	}
+
+#intro-proyectos p,
+#intro-proyectos a {
+	height:auto;
+	float:none;
+	margin:auto;
+	}
+
+#intro-proyectos p {
+	margin:0;
+	padding:30px;
+	width:100%;
+	}
+
+#intro-proyectos a {
+	width:100%;
+	height:auto;
+	background-image:none;
+	content: "Reserva de los lagos";
+	color:#fff;
+	font-size:30px;
+	text-align:center;
+	font-family: 'ArsenalBold';
+	text-transform:uppercase;
+	background-color:#005DC5;
+	box-shadow:0 0 5px rgba(101,121,118,0.6);
+	display:block;
+	box-sizing:border-box;
+	padding:30px 0;
+	}
+
+#intro-proyectos a:before {
+	display:none;
+	}
+
+
+	}
+
+@media screen and (max-width:480px) {
+
+/*popup------------------------ */
+.cd-popup-trigger {
+	width: 60px;
+	height: 70px;
+	right: 0px;
+	bottom: 40px;
+	background-color: rgba(0, 79, 189, 0.8);
+	border-radius: 40px 0 0 40px;
+	padding: 0;
+  }
+
+.cd-popup-trigger span {
+	  display: none;
+  }
+
+body {
+	margin:0;
+	}
+
+header {
+	border:none;
+	}
+
+.overlay {
+	background-image:none;
+	background-color:rgba(0,93,197,0.9);
+	}
+
+.overlay ul li a {
+	font-size:30px;
+	line-height:60px;
+	color:#fff;
+	}
+
+.overlay ul li a:hover {
+	color:#D5E6FD;
+	}
+
+.overlay .overlay-close {
+	width:40px;
+	height:40px;
+	background:url(../imagenes/close-menu-p.png) no-repeat center center;
+}
+
+footer {
+	width:100%;
+	height:auto;
+	border-radius:0;
+	box-sizing:border-box;
+	margin-top:50px;
+	padding:30px 0px;
+	}
+
+footer p {
+	font-size: 14px;
+}
+
+footer h5 {
+	margin-top:10px;
+	}
+
+footer h5 a {
+	color:#B0EFFD;
+	}
+
+footer h5 a:hover {
+	color:#FFF;
+	}
+
+/*POLÍTICA DE CALIDAD*/
+
+#header-calidad {
+	padding:60px 0;
+	}
+
+#header-calidad figure,
+#header-calidad figure img {
+	width:200px;
+	height:200px;
+	}
+
+#contenido-calidad p {
+	font-size:18px;
+	line-height:21px;
+	text-align:left;
+	}
+
+#contenido-calidad p span {
+	font-size:23px;
+	line-height:26px;
+	}
+
+#cierre-calidad {
+	font-size:23px;
+	line-height:26px;
+	padding:20px;
+	margin-top:30px;
+	margin-bottom:20px;
+	}
+
+/*NUESTRA HISTORIA*/
+
+#header-nuestra-historia {
+	background-image:none;
+	}
+
+#intro-construimos {
+	margin:auto;
+	width:100%;
+	background-color:#005DC5;
+	padding-top:40px;
+	}
+
+#intro-construimos:hover {
+	background-color:#005DC5;
+	width:100%;
+	}
+
+#intro-construimos figure {
+	width:220px;
+	height:220px;
+	margin:auto;
+	}
+
+#intro-construimos figure img {
+	width:220px;
+	height:220px;
+	}
+
+#intro-construimos h1 {
+	font-size:21px;
+	line-height:23px;
+	padding:0 30px;
+	margin-bottom:30px;
+	}
+
+#intro-construimos p {
+	padding:20px 30px 30px 30px;
+	background-color:rgba(0,44,91,0.0);
+	border-top:1px dotted rgba(255,255,255,0.5);
+	}
+
+#especializado {
+	padding:40px 20px;
+	}
+
+#especializado p {
+	font-size:20px;
+	line-height:23px;
+	}
+
+#linea-de-tiempo {
+	padding-bottom:20px;
+	}
+
+
+#fechas {
+	margin-left:10px;
+	margin-right:10px;
+	margin-top:60px;
+	}
+
+
+#fechas li {
+	padding-bottom:0px;
+	margin-bottom:70px;
+	}
+
+
+#fechas li:nth-child(odd) {
+	padding-right:30px;
+	width:100%;
+	}
+
+.iconos-right {
+	width:50px;
+	height:50px;
+	margin-left:7px;
+	}
+
+#fechas li:nth-child(even) {
+	width:100%;
+	margin-left:0;
+	padding-left:30px;
+	}
+
+.iconos-left {
+	width:50px;
+	height:50px;
+	margin-left:-56px;
+	}
+
+/*ferreteria*/
+
+.categorias-grandes .nombre-categorias {
+	top:70px;
+	}
+
+#categorias-menores {
+	padding:0 2%;
+	}
+
+/**OBRAS CIVILES*/
+
+#header-galeria-obras figure,
+#header-galeria-obras figure img {
+	width:120px;
+	height:120px;
+	}
+
+
+}
+
+
+@media screen and (max-width:475px) {
+
+#menu-general {
+	border-top: 120px solid #1674F4;
+	border-right: 120px solid transparent;
+	top:5px;
+	left:5px;
+	}
+
+#trigger-overlay {
+	top:-130px;
+	width:60px;
+	font-size:17px;
+	}
+
+.overlay ul li a {
+	font-size:25px;
+	line-height:50px;
+
+}
+
+#header-calidad h1 {
+	margin:auto;
+	width:90%;
+	text-align:center;
+	color:#fff;
+	border:1px solid rgba(255,255,255,0.4);
+	font-size:25px;
+	text-transform:uppercase;
+	font-family: 'ArsenalBold';
+	padding:10px;
+	margin-top:20px;
+	}
+
+#mapa h2 {
+	font-size:40px;
+	}
+
+/*ferreteria-categorias*/
+
+
+#categorias-menores li a {
+	width:100%;
+	}
+
+#categorias-menores li a:before {
+	height:220px;
+	}
+
+#categorias-menores li a span {
+	font-size:22px;
+	}
+
+/*obras civiles*/
+
+#header-galeria-obras h1 {
+	font-size:25px;
+	}
+
+	}

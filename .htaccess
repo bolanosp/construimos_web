@@ -1,0 +1,7 @@
+
+RewriteEngine on
+# Use PHP5.4 as default
+AddHandler application/x-httpd-php54 .php
+RewriteCond %{HTTP_HOST} ^construimos\.com\.co$
+RewriteRule ^/?$ "https\:\/\/www\.construimos\.com\.co\/" [R=301,L]
+

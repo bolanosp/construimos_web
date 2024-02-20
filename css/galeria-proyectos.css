@@ -1,0 +1,187 @@
+@font-face {
+	font-family: 'entypo';
+	src:url('../fonts/controls/entypo.eot');
+	src:url('../fonts/controls/entypo.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/controls/entypo.woff') format('woff'),
+		url('../fonts/controls/entypo.ttf') format('truetype'),
+		url('../fonts/controls/entypo.svg#entypo') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+.cbp-bislideshow {
+	list-style: none;
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: -1;
+	padding: 0;
+	margin: 0;
+}
+
+.cbp-bislideshow li {
+	position: absolute;
+	width: 101%;
+	height: 101%;
+	top: -0.5%;
+	left: -0.5%;
+	opacity: 0;
+	-webkit-transition: opacity 1s;
+	-moz-transition: opacity 1s;
+	transition: opacity 1s;
+}
+
+/* If background-size supported we'll add the images to the background of the li */
+
+.backgroundsize .cbp-bislideshow li {
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	background-size: cover;
+	background-position: center center;
+}
+
+.backgroundsize .cbp-bislideshow li #descripcion-reserva-los-lagos {
+	position:absolute;
+	max-width:300px;
+	height:auto;
+	background-color:rgba(255,255,255,0.9);
+	top:26px;
+	left:30px;
+	padding:50px 20px 30px 30px;
+	box-sizing:border-box;
+	}
+	
+.backgroundsize .cbp-bislideshow li #descripcion-reserva-los-lagos figure {
+	background-image:url(../imagenes/construimos-logo.png);
+	width:150px;
+	height:150px;
+	background-size:cover;
+	margin-left:60px;
+	}
+	
+.backgroundsize .cbp-bislideshow li #descripcion-reserva-los-lagos h1 {
+	color:#005DC5;
+	font-size:25px;
+	font-family: 'ArsenalBold';
+	margin-top:20px;
+	margin-bottom:20px;
+	}
+	
+.backgroundsize .cbp-bislideshow li #descripcion-reserva-los-lagos p {
+	color:#002C5B;
+	font-size:20px;
+	line-height:24px;
+	}
+
+/* ...and hide the images */
+.backgroundsize .cbp-bislideshow li img {
+	display: none;
+}
+
+.cbp-bislideshow li img {
+	display: block;
+	width: 100%;
+}
+
+.cbp-bicontrols {
+	position: fixed;
+	width: 300px;
+	height: 100px;
+	margin: -50px 0 0 -150px;
+	top: 50%;
+	left: 50%;
+}
+
+.cbp-bicontrols span {
+	float: left;
+	width: 100px;
+	height: 100px;
+	position: relative;
+	cursor: pointer;
+}
+
+.cbp-bicontrols span:before {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	text-align: center;
+	font-family: 'entypo';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 100px;
+	font-size: 80px;
+	color: #005DC5;
+	-webkit-font-smoothing: antialiased;
+	opacity: 0.8;
+}
+
+.cbp-bicontrols span:hover:before {
+	opacity: 1;
+}
+
+.cbp-bicontrols span:active:before {
+	top: 2px;
+}
+
+span.cbp-biplay:before {
+	content: "\e002";
+}
+
+span.cbp-bipause:before {
+	content: "\e003";
+}
+
+span.cbp-binext:before {
+	content: "\e000";
+}
+
+span.cbp-biprev:before {
+	content: "\e001";
+}
+
+.cbp-bicontrols span.cbp-binext {
+	float: right;
+}
+
+/* Fallback */
+
+.no-js.no-backgroundsize .cbp-bislideshow li:first-child {
+	opacity: 1;
+}
+
+.no-js.backgroundsize .cbp-bislideshow li:first-child img {
+	display: block;
+}
+
+
+@media screen and (max-width:480px) {
+
+.backgroundsize .cbp-bislideshow li #descripcion-reserva-los-lagos {
+	top:10px;
+	left:10px;
+	}
+	
+.cbp-bicontrols {
+	top: 90%;
+	}
+	
+.backgroundsize .cbp-bislideshow li #descripcion-reserva-los-lagos h1 {
+	font-size:22px;
+	margin-top:15px;
+	margin-bottom:15px;
+	}
+	
+.backgroundsize .cbp-bislideshow li #descripcion-reserva-los-lagos p {
+	font-size:18px;
+	line-height:22px;
+	}
+	
+	
+}
