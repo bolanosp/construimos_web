@@ -136,7 +136,7 @@ body {
 
 ::-webkit-scrollbar-thumb {
   /*barra-scroll*/
-  background-color: #1674f4;
+  background-color: #0933a3;
 }
 
 ::-webkit-scrollbar-thumb:hover {
@@ -160,7 +160,7 @@ a {
 #menu-general {
   width: 0;
   height: 0;
-  border-top: 150px solid #1674f4;
+  border-top: 150px solid #0933a3;
   border-right: 150px solid transparent;
   position: absolute;
   top: 1.1vw;
@@ -256,7 +256,7 @@ a {
 }
 
 .overlay ul li a:hover {
-  color: #005dc5;
+  color: #0933a3;
 }
 
 /* Effects */
@@ -446,16 +446,16 @@ header figure:hover {
   width: 45%;
   height: 250px;
   text-align: center;
-  border: 1px solid #005dc5;
+  border: 1px solid #0933a3;
   font-size: 20px;
   line-height: 30px;
   margin: 2.5%;
-  padding-top: 20px;
+  padding: 3rem;
   color: #242a36;
 }
 
 #sedes section h2 {
-  color: #005dc5;
+  color: #0933a3;
   font-weight: 700;
   font-size: 30px;
   line-height: 45px;
@@ -621,7 +621,7 @@ header figure:hover {
   text-align: center;
   font-family: "ArsenalBold";
   font-size: 28px;
-  color: #005dc5;
+  color: #0933a3;
   padding-bottom: 20px;
 }
 
@@ -630,7 +630,7 @@ header figure:hover {
   box-shadow: 0 0 10px rgba(153, 153, 153, 0.4);
   font-size: 20px;
   line-height: 24px;
-  color: #005dc5;
+  color: #0933a3;
   padding: 15px;
   text-align: center;
   box-sizing: border-box;
@@ -716,7 +716,7 @@ xpopup
   background-image: url(../imagenes/contact.png);
   background-position: left center;
   background-repeat: no-repeat;
-  background-color: #005dc5;
+  background-color: #0933a3;
   color: white;
   font-size: 16px;
   line-height: 18px;
@@ -758,7 +758,7 @@ xpopup
   padding-top: 40px;
   max-width: 400px;
   margin: 4em auto;
-  background: #005dc5;
+  background: #0933a3;
   border-radius: 0.25em 0.25em 0.4em 0.4em;
   text-align: center;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
@@ -990,7 +990,7 @@ xpopup
   #sedes section {
     font-size: 16px;
     line-height: 26px;
-    padding-top: 40px;
+    padding: 3rem;
   }
 
   #sedes section h2 {
