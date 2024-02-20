@@ -319,8 +319,8 @@ header figure img {
 }
 
 header figure:hover {
-  -webkit-filter: saturate(2);
-  filter: saturate(2);
+  -webkit-filter: saturate(1.3);
+  filter: saturate(1.3);
 }
 
 #categorias-inicio {
