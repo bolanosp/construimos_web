@@ -336,25 +336,20 @@ header figure:hover {
   height: 250px;
   margin: 10px;
   background-position: center center;
+  background-size: cover;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
 }
 
 #categorias-inicio li:nth-child(1) {
-  background-image: url(../imagenes/accesoriosPVC_landing.jpg);
+  background-image: url(../imagenes/landing/products/pvc.jpg);
 }
 
 #categorias-inicio li:nth-child(2) {
-  background-image: url(../imagenes/tanques_landing.jpg);
-}
-
-#categorias-inicio li:nth-child(2) a h2,
-#categorias-inicio li:nth-child(4) a h2,
-#categorias-inicio li:nth-child(5) a h2 {
-  padding-top: 30px;
+  background-image: url(../imagenes/landing/products/cemento.jpg);
 }
 
 #categorias-inicio li:nth-child(3) {
-  background-image: url(../imagenes/hierro_landing.jpg);
+  background-image: url(../imagenes/landing/products/hierro.jpg);
 }
 
 #categorias-inicio li:nth-child(4) {
@@ -367,6 +362,12 @@ header figure:hover {
 
 #categorias-inicio li:nth-child(6) {
   background-image: url(../imagenes/accesorios-y-repuestos-landing.jpg);
+}
+
+#categorias-inicio li:nth-child(2) a h2,
+#categorias-inicio li:nth-child(4) a h2,
+#categorias-inicio li:nth-child(5) a h2 {
+  padding-top: 30px;
 }
 
 #categorias-inicio a {
