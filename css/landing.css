@@ -551,6 +551,7 @@ header figure:hover {
   height: 300px;
   position: relative;
   float: left;
+  background-size: cover;
 }
 
 #tres-principales li:nth-child(1) {
