@@ -393,6 +393,7 @@ header figure:hover {
   border: #fff 0.4px solid;
   /* background-color: rgba(0, 79, 189, 0.7); */
   backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
   border-radius: 4%;
   font-size: 22px;
   font-family: "Montserrat", sans-serif;
