@@ -80,6 +80,7 @@ video {
   font: inherit;
   vertical-align: baseline;
 }
+
 /* HTML5 display-role reset for older browsers */
 article,
 aside,
@@ -94,17 +95,21 @@ nav,
 section {
   display: block;
 }
+
 body {
   line-height: 1;
 }
+
 ol,
 ul {
   list-style: none;
 }
+
 blockquote,
 q {
   quotes: none;
 }
+
 blockquote:before,
 blockquote:after,
 q:before,
@@ -298,6 +303,7 @@ a {
   -webkit-transform: translateY(25%) rotateX(-35deg);
   transform: translateY(25%) rotateX(-35deg);
 }
+
 /*CIERRE MENÚ*/
 
 header {
@@ -495,6 +501,7 @@ header figure:hover {
   max-width: 80%;
   margin-left: 10%;
 }
+
 .nbs-flexisel-ul {
   position: relative;
   width: 9999px;
@@ -545,6 +552,7 @@ header figure:hover {
   right: -50px;
   background: url(../imagenes/button-next.png) no-repeat;
 }
+
 /**/
 
 /*mapas*/
@@ -590,6 +598,7 @@ header figure:hover {
   text-align: center;
   box-sizing: border-box;
 }
+
 /*cierre-mapas*/
 
 footer {
@@ -636,6 +645,7 @@ xnugget info
   bottom: 0;
   left: 0;
 }
+
 .cd-nugget-info a {
   position: relative;
   font-size: 14px;
@@ -644,16 +654,20 @@ xnugget info
   -moz-transition: all 0.2s;
   transition: all 0.2s;
 }
+
 .no-touch .cd-nugget-info a:hover {
   opacity: 0.8;
 }
+
 .cd-nugget-info span {
   vertical-align: middle;
   display: inline-block;
 }
+
 .cd-nugget-info span svg {
   display: block;
 }
+
 .cd-nugget-info .cd-nugget-info-arrow {
   fill: #5e6e8d;
 }
@@ -661,13 +675,35 @@ xnugget info
 /* --------------------------------
 xpopup
 -------------------------------- */
+.cd-popup-pse {
+  width: 200px;
+  height: 70px;
+  position: fixed;
+  right: 50px;
+  bottom: 130px;
+  background-image: url(../imagenes/landing/botones/pse.png);
+  background-position: left center;
+  background-repeat: no-repeat;
+  background-color: #0933a3;
+  color: white;
+  font-size: 14px;
+  line-height: normal;
+  z-index: 20;
+  border-radius: 20px;
+  padding: 15px 10px 20px 60px;
+}
+
+.cd-popup-pse:hover {
+  background-color: #d3c125;
+}
+
 .cd-popup-trigger {
   width: 200px;
   height: 70px;
   position: fixed;
   right: 50px;
   bottom: 50px;
-  background-image: url(../imagenes/contact.png);
+  background-image: url(../imagenes/landing/botones/wa.png);
   background-position: left center;
   background-repeat: no-repeat;
   background-color: #0933a3;
@@ -697,6 +733,7 @@ xpopup
   -moz-transition: opacity 0.3s 0s, visibility 0s 0.3s;
   transition: opacity 0.3s 0s, visibility 0s 0.3s;
 }
+
 .cd-popup.is-visible {
   opacity: 1;
   visibility: visible;
@@ -760,6 +797,7 @@ xpopup
   width: 30px;
   height: 30px;
 }
+
 .cd-popup-container .cd-popup-close::before,
 .cd-popup-container .cd-popup-close::after {
   content: "";
@@ -769,6 +807,7 @@ xpopup
   height: 3px;
   background-color: white;
 }
+
 .cd-popup-container .cd-popup-close::before {
   -webkit-transform: rotate(45deg);
   -moz-transform: rotate(45deg);
@@ -777,6 +816,7 @@ xpopup
   transform: rotate(45deg);
   left: 8px;
 }
+
 .cd-popup-container .cd-popup-close::after {
   -webkit-transform: rotate(-45deg);
   -moz-transform: rotate(-45deg);
@@ -785,6 +825,7 @@ xpopup
   transform: rotate(-45deg);
   right: 8px;
 }
+
 .is-visible .cd-popup-container {
   -webkit-transform: translateY(0);
   -moz-transform: translateY(0);
@@ -792,11 +833,13 @@ xpopup
   -o-transform: translateY(0);
   transform: translateY(0);
 }
+
 @media only screen and (min-width: 1170px) {
   .cd-popup-container {
     margin: 8em auto;
   }
 }
+
 /*CIERRE POP UP**/
 
 /* M E D I A _ Q U E R Y
@@ -853,7 +896,24 @@ xpopup
 
 /*CELULAR*/
 @media screen and (max-width: 700px) {
+
   /*popup------------------------ */
+  .cd-popup-pse {
+    width: 70px;
+    height: 70px;
+    right: 5px;
+    bottom: 120px;
+    background-color: rgba(186, 189, 0, 0.8);
+    border-radius: 35px 5px 5px 35px;
+    padding: 0;
+    background-position: center;
+    background-image: url(../imagenes/landing/botones/pse.png);
+  }
+
+  .cd-popup-pse span {
+    display: none;
+  }
+
   .cd-popup-trigger {
     width: 70px;
     height: 70px;
