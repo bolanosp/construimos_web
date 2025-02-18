@@ -923,7 +923,7 @@ xpopup
     border-radius: 35px 5px 5px 35px;
     padding: 0;
     background-position: center;
-    background-image: url(../imagenes/contact.svg);
+    background-image: url(../imagenes/landing/botones/wa.svg);
   }
 
   .cd-popup-trigger span {
